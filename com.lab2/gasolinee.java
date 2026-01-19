@@ -17,6 +17,7 @@ public class gasolinee {
         int toll = sc.nextInt();
         t_cost s = new t_cost(miles, cost, fees, toll);
         System.out.println("Total daily driving cost is: " + s.fullcost());
+        sc.close();
     }
 }
 class t_cost{

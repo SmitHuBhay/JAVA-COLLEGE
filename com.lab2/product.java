@@ -23,10 +23,11 @@ public class product {
 
         invoice x = new invoice(no, quantity, desc, price);
         System.out.println("The final price is : " + x.getInvoiceAmount(quantity, price));
+        sc.close();
     }
 }
 
-class invoice {
+final class invoice {
 
     int no, quantity;
     String desc;
