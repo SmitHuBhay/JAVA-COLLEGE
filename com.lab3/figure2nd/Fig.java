@@ -1,3 +1,4 @@
+// package figure2nd;
 import java.util.Scanner;
 
 public class Fig {
