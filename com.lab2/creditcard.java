@@ -34,11 +34,11 @@ class checker{
         this.limit = limit;
     }
     void checklimit(){
-        int newbal = bal + charge - credit;
-        if(newbal > limit){
+        int netball = bal + charge - credit;
+        if(netball > limit){
             System.out.println("Account " + acc + ": Credit limit exceeded.");
         }else{
-            System.out.println("Account " + acc + ": Remaining balance : " + (limit - newbal));
+            System.out.println("Account " + acc + ": Remaining balance : " + (limit - netball));
         }
     }
 }

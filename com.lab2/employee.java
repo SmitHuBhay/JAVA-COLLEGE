@@ -30,6 +30,7 @@ public class employee {
         e1.setSalary(e1.getSalary()*1.1*12);
         System.out.println("First Employee Salary : " + e1.getSalary());
         System.out.println("Second Employee Salary : " + e2.getSalary());
+        sc.close();
     }
 }
 final class emp{
