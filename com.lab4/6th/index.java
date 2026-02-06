@@ -21,6 +21,9 @@ public class index {
         }
         client nx = new client(arr);
         nx.calc();
+        for(int el : arr){
+            System.out.print(el+" ");
+        }
         s.close();
     }
 }
@@ -37,12 +40,13 @@ class Half implements Function {
 class client{
     int []arr;
     Half m = new Half();
-    client(int []arr) {
+    client(int... arr) {
         this.arr = arr;
     }
-    void calc(){
+    int[] calc(){
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(m.evaluate(arr[i])+" ");
+            arr[i] = m.evaluate(arr[i]);
         }
+        return arr;
     }
 }
