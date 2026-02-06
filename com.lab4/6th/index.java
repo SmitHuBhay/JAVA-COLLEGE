@@ -12,15 +12,16 @@ import java.util.Scanner;
 public class index {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        // System.out.println("Enter the number of values you want to enter: ");
-        // int x = s.nextInt();
+        System.out.println("Enter the number of values you want to enter: ");
+        int x = s.nextInt();
         int arr[]={1,2,5,6,8,47,96};
-        // for(int i=0;i<x;i++){
-        //     System.out.println(i+": ");
-        //     arr[i] = s.nextInt();
-        // }
+        for(int i=0;i<x;i++){
+            System.out.println(i+": ");
+            arr[i] = s.nextInt();
+        }
         client nx = new client(arr);
-        nx.calc(arr);
+        nx.calc();
+        s.close();
     }
 }
 interface Function {
@@ -39,7 +40,7 @@ class client{
     client(int []arr) {
         this.arr = arr;
     }
-    void calc(int arr[]){
+    void calc(){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(m.evaluate(arr[i])+" ");
         }
