@@ -66,7 +66,7 @@ class QueueDemo implements QueueImpl {
     @Override
     public void insert() throws Exception {
         if (i == 10) {
-            throw new Exception("Queue Overflow");
+            throw new Exception("Queue Overflow horaha hai");
         }
         queue[i++] = 'P';
     }
@@ -74,7 +74,7 @@ class QueueDemo implements QueueImpl {
     @Override
     public void delete() throws Exception {
         if (i == 0) {
-            throw new Exception("Queue Underflow");
+            throw new Exception("Queue Underflow horaha hai");
         }
         queue[--i] = 'N';
     }
