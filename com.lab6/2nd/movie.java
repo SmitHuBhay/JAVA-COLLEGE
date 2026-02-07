@@ -6,12 +6,12 @@ import java.util.Scanner;
 //and calculates how much income the show earns.
 public class movie {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter the Number of Attendee's : ");
-        int n = s.nextInt();
-        theater t = new theater(n);
-        System.out.println("The total profit is : " + t.TotalPay());
-        s.close();
+        try (Scanner s = new Scanner(System.in)) {
+            System.out.print("Enter the Number of Attendee's : ");
+            int n = s.nextInt();
+            theater t = new theater(n);
+            System.out.println("The total profit is : " + t.TotalPay());
+        }
     }
 }
 class theater{
